@@ -1,0 +1,17 @@
+{
+    "ClassName": "Folder",
+    "Children": [
+        {
+            "Name": "ActionsRemoteEvent",
+            "ClassName": "RemoteEvent"
+        },
+        {
+            "Name": "ActionsEvent",
+            "ClassName": "BindableEvent"
+        },
+        {
+            "Name": "ActionsUnreliableRemoteEvent",
+            "ClassName": "UnreliableRemoteEvent"
+        }
+    ]
+}

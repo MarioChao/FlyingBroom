@@ -1,0 +1,33 @@
+{
+    "ClassName": "Part",
+    "Properties": {
+        "Size": [0.5, 0.5, 7],
+        "CustomPhysicalProperties": {
+            "PhysicalProperties": {
+                "density": 0.01,
+                "elasticity": 0.5,
+                "elasticityWeight": 1,
+                "friction": 0.3,
+                "frictionWeight": 1
+            }
+        }
+    },
+    "Children": [
+        {
+            "Name": "Mesh",
+            "ClassName": "SpecialMesh",
+            "Properties": {
+                "MeshId": "rbxassetid://36365830",
+                "Scale": [1.5, 1.5, 1.5],
+                "TextureId": "rbxassetid://36365793"
+            }
+        },
+        {
+            "Name": "Sparkles",
+            "ClassName": "Sparkles",
+            "Properties": {
+                "SparkleColor": [0.705882, 0.313726, 0.705882]
+            }
+        }
+    ]
+}

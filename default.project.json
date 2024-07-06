@@ -1,0 +1,7 @@
+{
+  "name": "FlyingBroom",
+  "tree": {
+    "$path": "src/Flying Broom"
+  },
+  "emitLegacyScripts": false
+}
