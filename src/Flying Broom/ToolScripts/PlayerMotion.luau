@@ -6,7 +6,7 @@ local PlayerMotion = {}
 
 ---------- Imports ----------
 local ToolScripts = script.Parent
-local User = require(ToolScripts.User)
+local User = require(ToolScripts:WaitForChild("User"))
 
 local ControlModule
 

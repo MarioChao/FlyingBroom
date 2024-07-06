@@ -11,7 +11,7 @@ local TweenService = game:GetService("TweenService")
 
 ---------- Imports ----------
 local ToolScripts = script.Parent
-local User = require(ToolScripts.User)
+local User = require(ToolScripts:WaitForChild("User"))
 
 ---------- Instances ----------
 local Tool = script.Parent.Parent

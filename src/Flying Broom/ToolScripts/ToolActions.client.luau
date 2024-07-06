@@ -8,8 +8,8 @@ end
 
 ---------- Imports ----------
 local ToolScripts = script.Parent
-local PlayerMotion = require(ToolScripts.PlayerMotion)
-local User = require(ToolScripts.User)
+local PlayerMotion = require(ToolScripts:WaitForChild("PlayerMotion"))
+local User = require(ToolScripts:WaitForChild("User"))
 
 ---------- Services ----------
 local RunService = game:GetService("RunService")
