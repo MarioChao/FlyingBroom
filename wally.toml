@@ -1,12 +1,13 @@
 [package]
-name = "mariochao/flyingbroom"
-description = "A bundle of all shared modules in Anirio Utility"
+name = "mariochao/flying-broom"
+description = "Revamped Roblox broom gear, flying tool, inspired by Wandering Witch"
 
 version = "1.0.0"
 license = "MIT"
 authors = ["Mario Chao"]
 realm = "shared"
 registry = "https://github.com/UpliftGames/wally-index"
+exclude = ["FlyingBroom.rbxm", "flying-broom.rbxm", "**/TestPackages"]
 
 [dependencies]
 CFrameUtility = "anytrio/cframe-utility@1"

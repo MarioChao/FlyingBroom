@@ -31,7 +31,7 @@ Original Broom gear [here](https://www.roblox.com/catalog/36913601/Broom).<br>
 Original Raven Witch Hat [here](https://www.roblox.com/catalog/1117736987/Raven-Witch-Hat).<br>
 Sound effects from Roblox.<br>
 Some features and designs inspired by [Wandering Witch: The Journey of Elaina](https://ga.sbcr.jp/sp/tabitabi/).<br>
-Some coding help from [cozywitchcraft](https://github.com/cozywitchcraft) and [heksi](https://github.com/Heksii).
+Some coding help from [cozywitchcraft](https://github.com/cozywitchcraft) and [heksi](https://github.com/Heksii) for CFrame Utility.
 
 # Rojo
 
