@@ -1,0 +1,12 @@
+[package]
+name = "mariochao/flyingbroom"
+description = "A bundle of all shared modules in Anirio Utility"
+
+version = "1.0.0"
+license = "MIT"
+authors = ["Mario Chao"]
+realm = "shared"
+registry = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+CFrameUtility = "anytrio/cframe-utility@1"

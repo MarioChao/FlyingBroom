@@ -1,7 +1,10 @@
 {
-  "name": "FlyingBroom",
-  "tree": {
-    "$path": "src/Flying Broom"
-  },
-  "emitLegacyScripts": false
+	"name": "FlyingBroom",
+	"tree": {
+		"ToolPackages": {
+			"$path": "Packages"
+		},
+		"$path": "src/Flying Broom"
+	},
+	"emitLegacyScripts": false
 }

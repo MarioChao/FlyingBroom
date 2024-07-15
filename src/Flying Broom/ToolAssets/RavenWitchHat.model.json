@@ -1,33 +1,33 @@
 {
-    "ClassName": "Accessory",
-    "Properties": {
-        "AccessoryType": "Hat"
-    },
-    "Children": [
-        {
-            "Name": "Handle",
-            "ClassName": "Part",
-            "Properties": {
-                "Size": [2.5, 2.5, 2.5]
-            },
-            "Children": [
-                {
-                    "Name": "HatAttachment",
-                    "ClassName": "Attachment",
-                    "Properties": {
-                        "CFrame": [0, -0.25, 0, 1, 0, 0, 0, 0.98480773, 0.173648193, 0, -0.173648193, 0.98480773]
-                    }
-                },
-                {
-                    "Name": "Mesh",
-                    "ClassName": "SpecialMesh",
-                    "Properties": {
-                        "MeshId": "rbxassetid://1117711484",
-                        "Scale": [4, 4, 4],
-                        "TextureId": "rbxassetid://1117711743"
-                    }
-                }
-            ]
-        }
-    ]
+	"ClassName": "Accessory",
+	"Properties": {
+		"AccessoryType": "Hat"
+	},
+	"Children": [
+		{
+			"Name": "Handle",
+			"ClassName": "Part",
+			"Properties": {
+				"Size": [2.5, 2.5, 2.5]
+			},
+			"Children": [
+				{
+					"Name": "HatAttachment",
+					"ClassName": "Attachment",
+					"Properties": {
+						"CFrame": [0, -0.25, 0, 1, 0, 0, 0, 0.98480773, 0.173648193, 0, -0.173648193, 0.98480773]
+					}
+				},
+				{
+					"Name": "Mesh",
+					"ClassName": "SpecialMesh",
+					"Properties": {
+						"MeshId": "rbxassetid://1117711484",
+						"Scale": [4, 4, 4],
+						"TextureId": "rbxassetid://1117711743"
+					}
+				}
+			]
+		}
+	]
 }

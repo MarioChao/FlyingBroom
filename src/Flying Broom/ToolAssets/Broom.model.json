@@ -1,155 +1,155 @@
 {
-    "ClassName": "Part",
-    "Properties": {
-        "Transparency": 1,
-        "Size": [0.5, 0.5, 9.3],
-        "CustomPhysicalProperties": {
-            "PhysicalProperties": {
-                "density": 0.01,
-                "elasticity": 1,
-                "elasticityWeight": 1,
-                "friction": 0,
-                "frictionWeight": 1
-            }
-        },
-        "Massless": true
-    },
-    "Children": [
-        {
-            "Name": "BroomAlignPart",
-            "ClassName": "Part",
-            "Properties": {
-                "Transparency": 1,
-                "Size": [2, 1, 2],
-                "CanCollide": false,
-                "CanQuery": false,
-                "CanTouch": false,
-                "Massless": true
-            },
-            "Children": [
-                {
-                    "Name": "AlignPartAttachment",
-                    "ClassName": "Attachment"
-                },
-                {
-                    "Name": "AlignRootAttachment",
-                    "ClassName": "Attachment",
-                    "Properties": {
-                        "CFrame": [0, 1.4, 0.4, -1, 0, 0, 0, 1, 0, 0, 0, -1]
-                    }
-                },
-                {
-                    "Name": "RigidConstraint",
-                    "ClassName": "RigidConstraint"
-                }
-            ]
-        },
-        {
-            "Name": "ThrustSound",
-            "ClassName": "Sound",
-            "Properties": {
-                "SoundId": "rbxassetid://12222208",
-                "PlaybackSpeed": 1.5,
-                "Volume": 0.4
-            }
-        },
-        {
-            "Name": "BroomJointAttachment",
-            "ClassName": "Attachment"
-        },
-        {
-            "Name": "RigidConstraint",
-            "ClassName": "RigidConstraint"
-        },
-        {
-            "Name": "BroomAttachment",
-            "ClassName": "Attachment"
-        },
-        {
-            "Name": "AlignOrientation",
-            "ClassName": "AlignOrientation",
-            "Properties": {
-                "Enabled": false,
-                "Mode": "OneAttachment",
-                "Responsiveness": 100
-            }
-        },
-        {
-            "Name": "AntiGravity",
-            "ClassName": "VectorForce",
-            "Properties": {
-                "Force": [0, 0, 0],
-                "RelativeTo": "World"
-            }
-        },
-        {
-            "Name": "Mesh",
-            "ClassName": "SpecialMesh",
-            "Properties": {
-                "MeshId": "rbxassetid://36365830",
-                "Scale": [2, 2, 2],
-                "TextureId": "rbxassetid://36365793"
-            }
-        },
-        {
-            "Name": "Sparkles",
-            "ClassName": "Sparkles",
-            "Properties": {
-                "SparkleColor": [0.705882, 0.313726, 0.705882]
-            }
-        },
-        {
-            "Name": "TrailAttachment0",
-            "ClassName": "Attachment",
-            "Properties": {
-                "CFrame": [-0.5, 0, -3.8, 1, 0, 0, 0, 1, 0, 0, 0, 1]
-            }
-        },
-        {
-            "Name": "TrailAttachment1",
-            "ClassName": "Attachment",
-            "Properties": {
-                "CFrame": [0.5, 0, -3.8, 1, 0, 0, 0, 1, 0, 0, 0, 1]
-            }
-        },
-        {
-            "Name": "Trail",
-            "ClassName": "Trail",
-            "Properties": {
-                "Color": {
-                    "ColorSequence": {
-                        "keypoints": [
-                            {
-                                "time": 0.0,
-                                "color": [0.705882, 0.313726, 0.705882]
-                            },
-                            {
-                                "time": 1.0,
-                                "color": [0.705882, 0.313726, 0.705882]
-                            }
-                        ]
-                    }
-                },
-                "FaceCamera": true,
-                "Transparency": {
-                    "NumberSequence": {
-                        "keypoints": [
-                            {
-                                "time": 0.0,
-                                "value": 0.8,
-                                "envelope": 0.0
-                            },
-                            {
-                                "time": 1.0,
-                                "value": 1.0,
-                                "envelope": 0.0
-                            }
-                        ]
-                    }
-                },
-                "Lifetime": 0.15,
-                "MaxLength": 32
-            }
-        }
-    ]
+	"ClassName": "Part",
+	"Properties": {
+		"Transparency": 1,
+		"Size": [0.5, 0.5, 9.3],
+		"CustomPhysicalProperties": {
+			"PhysicalProperties": {
+				"density": 0.01,
+				"elasticity": 1,
+				"elasticityWeight": 1,
+				"friction": 0,
+				"frictionWeight": 1
+			}
+		},
+		"Massless": true
+	},
+	"Children": [
+		{
+			"Name": "BroomAlignPart",
+			"ClassName": "Part",
+			"Properties": {
+				"Transparency": 1,
+				"Size": [2, 1, 2],
+				"CanCollide": false,
+				"CanQuery": false,
+				"CanTouch": false,
+				"Massless": true
+			},
+			"Children": [
+				{
+					"Name": "AlignPartAttachment",
+					"ClassName": "Attachment"
+				},
+				{
+					"Name": "AlignRootAttachment",
+					"ClassName": "Attachment",
+					"Properties": {
+						"CFrame": [0, 1.4, 0.4, -1, 0, 0, 0, 1, 0, 0, 0, -1]
+					}
+				},
+				{
+					"Name": "RigidConstraint",
+					"ClassName": "RigidConstraint"
+				}
+			]
+		},
+		{
+			"Name": "ThrustSound",
+			"ClassName": "Sound",
+			"Properties": {
+				"SoundId": "rbxassetid://12222208",
+				"PlaybackSpeed": 1.5,
+				"Volume": 0.4
+			}
+		},
+		{
+			"Name": "BroomJointAttachment",
+			"ClassName": "Attachment"
+		},
+		{
+			"Name": "RigidConstraint",
+			"ClassName": "RigidConstraint"
+		},
+		{
+			"Name": "BroomAttachment",
+			"ClassName": "Attachment"
+		},
+		{
+			"Name": "AlignOrientation",
+			"ClassName": "AlignOrientation",
+			"Properties": {
+				"Enabled": false,
+				"Mode": "OneAttachment",
+				"Responsiveness": 100
+			}
+		},
+		{
+			"Name": "AntiGravity",
+			"ClassName": "VectorForce",
+			"Properties": {
+				"Force": [0, 0, 0],
+				"RelativeTo": "World"
+			}
+		},
+		{
+			"Name": "Mesh",
+			"ClassName": "SpecialMesh",
+			"Properties": {
+				"MeshId": "rbxassetid://36365830",
+				"Scale": [2, 2, 2],
+				"TextureId": "rbxassetid://36365793"
+			}
+		},
+		{
+			"Name": "Sparkles",
+			"ClassName": "Sparkles",
+			"Properties": {
+				"SparkleColor": [0.705882, 0.313726, 0.705882]
+			}
+		},
+		{
+			"Name": "TrailAttachment0",
+			"ClassName": "Attachment",
+			"Properties": {
+				"CFrame": [-0.5, 0, -3.8, 1, 0, 0, 0, 1, 0, 0, 0, 1]
+			}
+		},
+		{
+			"Name": "TrailAttachment1",
+			"ClassName": "Attachment",
+			"Properties": {
+				"CFrame": [0.5, 0, -3.8, 1, 0, 0, 0, 1, 0, 0, 0, 1]
+			}
+		},
+		{
+			"Name": "Trail",
+			"ClassName": "Trail",
+			"Properties": {
+				"Color": {
+					"ColorSequence": {
+						"keypoints": [
+							{
+								"time": 0.0,
+								"color": [0.705882, 0.313726, 0.705882]
+							},
+							{
+								"time": 1.0,
+								"color": [0.705882, 0.313726, 0.705882]
+							}
+						]
+					}
+				},
+				"FaceCamera": true,
+				"Transparency": {
+					"NumberSequence": {
+						"keypoints": [
+							{
+								"time": 0.0,
+								"value": 0.8,
+								"envelope": 0.0
+							},
+							{
+								"time": 1.0,
+								"value": 1.0,
+								"envelope": 0.0
+							}
+						]
+					}
+				},
+				"Lifetime": 0.15,
+				"MaxLength": 32
+			}
+		}
+	]
 }

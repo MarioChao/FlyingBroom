@@ -1,17 +1,17 @@
 {
-    "className": "Tool",
-    "properties": {
-        "ToolTip": "Soar around the atmosphere like the Ashen Witch",
-        "TextureId": "rbxassetid://36365752",
-        "Grip": [0, 0, -1, 1, 0, 0, 0, 0, -1, 0, 1, 0],
-        "Attributes": {
-            "AscendRideVelocitySize": {"Float64": 32},
-            "MaxRideVelocitySize": {"Float64": 64},
-            "MoveAccelerationFactor": {"Float64": 0.15},
-            "MountCooldown": {"Float64": 0.2},
-            "StoreCooldown": {"Float64": 0.2},
-            "ThrustCooldown": {"Float64": 2},
-            "ThrustVelocitySize": {"Float64": 128}
-        }
-    }
+	"className": "Tool",
+	"properties": {
+		"ToolTip": "Soar around the atmosphere like the Ashen Witch",
+		"TextureId": "rbxassetid://36365752",
+		"Grip": [0, 0, -1, 1, 0, 0, 0, 0, -1, 0, 1, 0],
+		"Attributes": {
+			"AscendRideVelocitySize": {"Float64": 32},
+			"MaxRideVelocitySize": {"Float64": 64},
+			"MoveAccelerationFactor": {"Float64": 0.15},
+			"MountCooldown": {"Float64": 0.2},
+			"StoreCooldown": {"Float64": 0.2},
+			"ThrustCooldown": {"Float64": 2},
+			"ThrustVelocitySize": {"Float64": 128}
+		}
+	}
 }
