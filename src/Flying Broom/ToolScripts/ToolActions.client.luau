@@ -97,7 +97,7 @@ local function broomRidingRotation()
 	if willTurnBroom then
 		-- Calculate CFrame
 		local goalVector = -flatVector.Unit
-		local goalCFrame = CFrame.new(Broom.Position):ToWorldSpace(CFrame.lookAt(Vector3.new(), goalVector))
+		local goalCFrame = CFrame.lookAlong(Broom.Position, goalVector)
 		local finalCFrame = CFrameUtility.getStandUpright(goalCFrame)
 		finalCFrame = finalCFrame:Lerp(CFrameUtility.getTiltUpright(Broom.CFrame), 0.8)
 
