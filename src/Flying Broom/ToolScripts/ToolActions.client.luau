@@ -340,8 +340,8 @@ local function onAntigravity()
 	if antigravityThrottle then
 		return
 	end
+	antigravityThrottle = true
 	task.defer(function()
-		antigravityThrottle = true
 		task.wait(0.05)
 		antigravityThrottle = false
 	end)
@@ -376,8 +376,8 @@ local function onMountBroom()
 	if mountThrottle then
 		return
 	end
+	mountThrottle = true
 	task.defer(function()
-		mountThrottle = true
 		task.wait(0.05)
 		mountThrottle = false
 	end)
@@ -400,8 +400,8 @@ local function onStoreBroom()
 	if storeThrottle then
 		return
 	end
+	storeThrottle = true
 	task.defer(function()
-		storeThrottle = true
 		task.wait(0.05)
 		storeThrottle = false
 	end)
@@ -419,8 +419,8 @@ local function onThrust()
 	if activatedThrottle then
 		return
 	end
+	activatedThrottle = true
 	task.defer(function()
-		activatedThrottle = true
 		task.wait(0.05)
 		activatedThrottle = false
 	end)

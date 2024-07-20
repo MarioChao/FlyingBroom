@@ -311,6 +311,7 @@ local function initSetUp()
 	accessoryName = storedAccessory.Name
 
 	-- Broom
+	setBroomCollision(false)
 	Broom.Transparency = 1
 	BroomRigidConstraint.Attachment0 = BroomJointAttachment
 	BroomRigidConstraint.Attachment1 = BroomAlignPart:WaitForChild("AlignPartAttachment")
