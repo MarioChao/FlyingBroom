@@ -2,11 +2,13 @@
 -- Server Tool Actions Script
 
 ---------- Validate container ----------
-if script:FindFirstAncestorWhichIsA("StarterPack") then
+
+if not (script:FindFirstAncestorWhichIsA("Workspace") or script:FindFirstAncestorWhichIsA("Backpack")) then
 	return
 end
 
 ---------- Services ----------
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local TweenService = game:GetService("TweenService")
 
@@ -24,6 +26,7 @@ local HandleSparkles = Handle:WaitForChild("Sparkles")
 local ToolEvents = Tool:WaitForChild("ToolEvents")
 local ActionsRemoteEvent = ToolEvents:WaitForChild("ActionsRemoteEvent")
 local ActionsUnreliableRemoteEvent = ToolEvents:WaitForChild("ActionsUnreliableRemoteEvent")
+local ToolRemoteFunction = ToolEvents:WaitForChild("ToolRemoteFunction")
 
 local ToolAssets = Tool:WaitForChild("ToolAssets")
 local RavenWitchHat = ToolAssets:WaitForChild("RavenWitchHat")
@@ -237,6 +240,14 @@ local function onActionsUnreliableServerEvent(caller: Player, mode: string, para
 	end
 end
 
+local function onToolServerInvoke(caller: Player, mode: string)
+	if mode == "Get Broom" then
+		return Broom
+	end
+
+	return nil
+end
+
 local function onUserLoaded(currentUser: User.UserInfo)
 	if currentUser.Humanoid then
 		toolUser = currentUser
@@ -269,7 +280,7 @@ local function onUserUnloaded(currentUser: User.UserInfo)
 	end
 
 	-- Unequip broom
-	Broom.Parent = nil
+	Broom.Parent = ReplicatedStorage
 	AlignPartRigidConstraint.Attachment1 = nil
 
 	BroomAlignOrientation.Enabled = false
@@ -313,6 +324,7 @@ local function initSetUp()
 	-- Broom
 	setBroomCollision(false)
 	Broom.Transparency = 1
+	Broom.Parent = ReplicatedStorage
 	BroomRigidConstraint.Attachment0 = BroomJointAttachment
 	BroomRigidConstraint.Attachment1 = BroomAlignPart:WaitForChild("AlignPartAttachment")
 
@@ -329,6 +341,7 @@ end
 
 ActionsRemoteEvent.OnServerEvent:Connect(onActionsServerEvent)
 ActionsUnreliableRemoteEvent.OnServerEvent:Connect(onActionsUnreliableServerEvent)
+ToolRemoteFunction.OnServerInvoke = onToolServerInvoke
 User.UserLoaded.Event:Connect(onUserLoaded)
 User.UserUnloaded.Event:Connect(onUserUnloaded)
 initSetUp()

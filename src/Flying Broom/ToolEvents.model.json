@@ -12,6 +12,10 @@
 		{
 			"Name": "ActionsUnreliableRemoteEvent",
 			"ClassName": "UnreliableRemoteEvent"
+		},
+		{
+			"Name": "ToolRemoteFunction",
+			"ClassName": "RemoteFunction"
 		}
 	]
 }

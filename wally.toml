@@ -2,7 +2,7 @@
 name = "mariochao/flying-broom"
 description = "Revamped Roblox broom gear, flying tool, inspired by Wandering Witch"
 
-version = "1.0.2"
+version = "1.0.3"
 license = "MIT"
 authors = ["Mario Chao"]
 realm = "shared"

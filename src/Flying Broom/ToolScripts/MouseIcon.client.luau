@@ -3,7 +3,7 @@
 
 ---------- Validate container ----------
 
-if script:FindFirstAncestorWhichIsA("StarterPack") then
+if not (script:FindFirstAncestorWhichIsA("Workspace") or script:FindFirstAncestorWhichIsA("Backpack")) then
 	return
 end
 

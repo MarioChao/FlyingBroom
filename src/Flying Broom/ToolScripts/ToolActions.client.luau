@@ -2,7 +2,8 @@
 -- Client Tool Actions Script
 
 ---------- Validate container ----------
-if script:FindFirstAncestorWhichIsA("StarterPack") then
+
+if not (script:FindFirstAncestorWhichIsA("Workspace") or script:FindFirstAncestorWhichIsA("Backpack")) then
 	return
 end
 
@@ -29,9 +30,9 @@ local ToolEvents = Tool:WaitForChild("ToolEvents")
 local ActionsEvent = ToolEvents:WaitForChild("ActionsEvent")
 local ActionsRemoteEvent = ToolEvents:WaitForChild("ActionsRemoteEvent")
 local ActionsUnreliableRemoteEvent = ToolEvents:WaitForChild("ActionsUnreliableRemoteEvent")
+local ToolRemoteFunction = ToolEvents:WaitForChild("ToolRemoteFunction")
 
-local ToolAssets = Tool:WaitForChild("ToolAssets")
-local Broom = ToolAssets:WaitForChild("Broom")
+local Broom = ToolRemoteFunction:InvokeServer("Get Broom")
 local BroomAlignPart = Broom:WaitForChild("BroomAlignPart")
 local BroomJointAttachment = Broom:WaitForChild("BroomJointAttachment")
 local BroomAlignOrientation = Broom:WaitForChild("AlignOrientation")
@@ -283,7 +284,7 @@ local function setBroomStored(stored: boolean, ignoreCooldown: boolean)
 
 	-- Force dismount
 	setRiding(false)
-	
+
 	-- Store or unstore
 	if stored then
 		handleTweens.Hide:Play()
@@ -429,21 +430,21 @@ local function onThrust()
 	if isStored then
 		return
 	end
-	
+
 	-- Validate thrust cooldown
 	local thrustCooldown = Tool:GetAttribute("ThrustCooldown")
 	if not (_time() - lastThrustTime >= thrustCooldown) then
 		return
 	end
 	lastThrustTime = _time()
-	
+
 	-- Check riding
 	if isRiding then
 		-- Thrust ride
 		task.defer(function()
 			thrustRideFor(0.3)
 		end)
-		
+
 		-- Thurst effect on server
 		ActionsRemoteEvent:FireServer("Thrust Ride")
 	else
@@ -452,16 +453,17 @@ local function onThrust()
 
 		-- Get thrust
 		local thurstVelocity = motionDirection.Unit * Tool:GetAttribute("ThrustVelocitySize")
-		
+
 		-- Thrust
 		Handle.AssemblyLinearVelocity = thurstVelocity
-		
+
 		-- Thrust effect on server
 		ActionsRemoteEvent:FireServer("Thrust")
 	end
 end
 
 ---------- Event functions ----------
+
 local function onActionsEvent(mode: string, ...)
 	-- Validate equipped
 	if not Tool.Equipped then
@@ -492,7 +494,7 @@ end
 
 local function onUserUnloaded(currentUser: User.UserInfo)
 	toolUser = currentUser
-	
+
 	-- Dismount
 	setBroomMounted(false, true)
 
@@ -505,6 +507,7 @@ local function onUserUnloaded(currentUser: User.UserInfo)
 end
 
 ---------- Calling / connecting functions ----------
+
 ActionsEvent.Event:Connect(onActionsEvent)
 User.UserLoaded.Event:Connect(onUserLoaded)
 User.UserUnloaded.Event:Connect(onUserUnloaded)
