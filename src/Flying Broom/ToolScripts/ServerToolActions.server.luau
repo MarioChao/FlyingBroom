@@ -8,8 +8,8 @@ if not (script:FindFirstAncestorWhichIsA("Workspace") or script:FindFirstAncesto
 end
 
 ---------- Services ----------
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TweenService = game:GetService("TweenService")
 
 ---------- Imports ----------

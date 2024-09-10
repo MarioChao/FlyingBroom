@@ -207,23 +207,25 @@ local function onRiding()
 			local goalCFrame = CFrame.lookAt(Vector3.new(), goalVector)
 			BroomAlignOrientation.CFrame = goalCFrame
 			BroomAlignOrientation.Enabled = true
-			BroomAntiGravity.Force = Vector3.new(0, Broom.AssemblyMass * workspace.Gravity, 0)
-
+			
 			table.insert(ridingConnections, RunService.PreSimulation:Connect(function()
 				broomRidingRotation()
 			end))
 			table.insert(ridingConnections, RunService.Heartbeat:Connect(function()
 				broomRidingMovement()
+				BroomAntiGravity.Force = Vector3.new(0, Broom.AssemblyMass * workspace.Gravity, 0)
 			end))
 		end
 	else
 		if #ridingConnections >= 1 then
 			BroomAlignOrientation.Enabled = false
-			BroomAntiGravity.Force = Vector3.new()
 
 			for _, connection in ridingConnections do
 				connection:Disconnect()
 			end
+
+			BroomAntiGravity.Force = Vector3.new()
+
 			ridingConnections = {}
 		end
 	end
