@@ -6,5 +6,5 @@
 		},
 		"$path": "src/Flying Broom"
 	},
-	"emitLegacyScripts": false
+	"emitLegacyScripts": true
 }
